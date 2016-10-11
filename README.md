@@ -24,6 +24,7 @@ Using
 In a NodeJS environment:
 
 ```
+export LIBRARY_PATH=
 npm install
 grunt
 ./build/Release foo.png

@@ -14,6 +14,9 @@
       'libraries': [
         '<!@(pkg-config --libs opencv)'
       ],
+      'ldflags': [
+        '<!@(pkg-config --libs opencv)',
+      ],
       'include_dirs': [
         '<!@(pkg-config opencv --cflags-only-I | sed s/-I//g)'
       ],
@@ -24,8 +27,6 @@
             'OTHER_CFLAGS': [
               '-g',
               '-mmacosx-version-min=10.7',
-              '-std=c++11',
-              '-stdlib=libc++',
               '-O3',
               '-Wall'
             ],
@@ -34,9 +35,11 @@
               '-mmacosx-version-min=10.7',
               '-std=c++11',
               '-stdlib=libc++',
+              '-stdlib=libstdc++',
               '-O3',
               '-Wall'
-            ]
+            ],
+
           }
         }]
       ]
