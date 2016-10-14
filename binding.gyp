@@ -23,21 +23,16 @@
       'conditions': [
         ['OS=="mac"', {
           'xcode_settings': {
+	      "CLANG_CXX_LANGUAGE_STANDARD": 'c++11',
+              "MACOSX_DEPLOYMENT_TARGET":"10.9",
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
             'OTHER_CFLAGS': [
-              '-g',
-              '-mmacosx-version-min=10.7',
               '-O3',
-              '-Wall'
+              '<!@(pkg-config --libs-only-l opencv)',
             ],
             'OTHER_CPLUSPLUSFLAGS': [
               '-g',
-              '-mmacosx-version-min=10.7',
-              '-std=c++11',
-              '-stdlib=libc++',
-              '-stdlib=libstdc++',
               '-O3',
-              '-Wall'
             ],
 
           }

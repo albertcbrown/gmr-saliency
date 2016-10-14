@@ -7,7 +7,7 @@ SOURCES = saliency.cpp Saliency/GMRsaliency.cpp SLIC/SLIC.cpp
 
 #CXXFLAGS = $(shell pkg-config --cflags opencv) -std=c++11 -g3 -Wall -O0
 
-CXXFLAGS = $(shell pkg-config --cflags opencv) -std=c++11 -g3 -Wall -O0
+CXXFLAGS = $(shell pkg-config --cflags opencv) -std=c++11 -g3 -Wall
 LDFLAGS = $(shell pkg-config --libs opencv) 
 
 all:
